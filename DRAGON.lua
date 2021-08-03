@@ -61,7 +61,7 @@ token = database:get(id_server..":token"),
 SUDO = database:get(id_server..":SUDO:ID"),
 UserName = database:get(id_server..":SUDO:USERNAME"),
  }
-create(config, "./kkkklInfo.lua")   
+create(config, "./Info.lua")   
 end 
 create_config_auto()
 token = database:get(id_server..":token")
@@ -83,7 +83,7 @@ exit 1
 fi
 if [ ! $token ]; then
 echo "╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸ ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸ ┉ ┉"
-echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE kkkklInfo.lua \e[0m"
+echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE Info.lua \e[0m"
 echo "╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉"
 exit 1
 fi
@@ -120,7 +120,7 @@ file:write(serialized)
 file:close() 
 end 
 local load_redis = function()  
-local f = io.open("./kkkklInfo.lua", "r")  
+local f = io.open("./Info.lua", "r")  
 if not f then   
 AutoSet()  
 else   
@@ -128,7 +128,7 @@ f:close()
 database:del(id_server..":token")
 database:del(id_server..":SUDO:ID")
 end  
-local config = loadfile("./kkkklInfo.lua")() 
+local config = loadfile("./Info.lua")() 
 return config 
 end 
 _redis = load_redis()  
@@ -143,7 +143,7 @@ print([[
 > CH › @rayanandsara
 ~> DEVELOPER › @oliver 
 ]])
-sudos = dofile("./kkkklInfo.lua")
+sudos = dofile("./Info.lua")
 SUDO = tonumber(sudos.SUDO)
 sudo_users = {SUDO}
 bot_id = sudos.token:match("(%d+)")  
@@ -1174,7 +1174,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/"..result.username_}},
-{{text = 'اضف البوت لمجموعتك', url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}},
+{{text = 'اضف البوت لمجموعتك', url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
@@ -3171,7 +3171,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/"..result.username_}},
-{{text = 'اضف البوت لمجموعتك', url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}},
+{{text = 'اضف البوت لمجموعتك', url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
