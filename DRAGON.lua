@@ -12741,54 +12741,15 @@ xl = 'نسبه رجوله '..text..' هي : \n '..sendnuj..'%'
 send(msg.chat_id_, msg.id_,xl) 
 database:del(bot_id..":"..msg.sender_user_id_..":rjo_Bots"..msg.chat_id_)
 end
-if text == 'انا مين' and SudoBot(msg) then 
-send(msg.chat_id_,msg.id_, '[انت مطوري نور عنيا🥺🤍](t.me/siria22)') 
-return false
-end
-
-if text == 'انا مين' and DevSoFi(msg) then 
-send(msg.chat_id_,msg.id_, '[انت مطوري الثاني حته مني 😍💚](t.me/siria22)') 
-return false
-end
-
-if text == 'انا مين' and Sudo(msg) then 
-send(msg.chat_id_,msg.id_, '[انت المطور بس الصغنن 🌝💘](t.me/siria22)') 
-return false
-end
-
-if text == 'انا مين' and CoSu(msg) then 
-send(msg.chat_id_,msg.id_, '[نت المالك هن يعني حاجه فوق فوف راسي 😂♥](t.me/siria22)') 
-return false
-end
-
-if text == 'انا مين' and Constructor(msg) then 
-send(msg.chat_id_,msg.id_, '[انت منشئ يسطا عتلاء منشئ عاوز حاجه تانيه😹🤦‍♂️](t.me/siria22)') 
-return false
-end
-
-if text == 'انا مين' and BasicConstructor(msg) then 
-send(msg.chat_id_,msg.id_, '[ انت هنا منشئ اساسي يعني اعلى رتبه عاوزك تفتخر😂✧](t.me/siria22)') 
-return false
-end
-
-if text == 'انا مين' and Manager(msg) then 
-send(msg.chat_id_,msg.id_, '[ انت المدير يعني الروم تحت سيطرتك😹](t.me/siria22)') 
-return false
-end
-
-if text == 'انا مين' and Mod(msg) then 
-send(msg.chat_id_,msg.id_, '[انت مجرد ادمن اجتهد عشان ياخد رتبه😹 ](t.me/siria22)') 
-return false
-end
-
-if text == 'انا مين' and Special(msg) then 
-send(msg.chat_id_,msg.id_, '[ انت مميز ابن ناس 😊 ](t.me/siria22)') 
-return false
-end
-
 if text == 'انا مين' then
-send(msg.chat_id_,msg.id_, '[انت مجرد عضو زليل حقير ملوش لزمه 😂](t.me/siria22)') 
-return false
+local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
+local function getpro(extra, result, success)
+if result.photos_[0] then
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,"انـت"..Rutba(msg.sender_user_id_,msg.chat_id_).." ✹روح قلبي 🥺❤️", msg.id_, msg.id_, "md")
+else
+send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
+  end end
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
 end
 
 if text == 'تيست' then 
