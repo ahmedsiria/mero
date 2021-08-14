@@ -1837,7 +1837,7 @@ end
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(bot_id) then 
 print("it is Bot")
-N = (database:get(bot_id.."Name:Bot") or "ويجا")
+N = (database:get(bot_id.."Name:Bot") or "سوريا")
 tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = bot_id,offset_ = 0,limit_ = 1},function(extra,result,success) 
 if result.photos_[0] then
@@ -12780,6 +12780,691 @@ end
 if text == 'تيست' then 
 send(msg.chat_id_,msg.id_, ' البوت شغال ') 
 return false
+end
+if text == "تفعيل ردود السورس"  then
+if Constructor(msg) then  
+database:set(bot_id.."my_GHoeq2:status"..msg.chat_id_,true) 
+send(msg.chat_id_, msg.id_," ✹تـم تـفعـيل ردود السورس") 
+return false  
+end
+end
+if text == "تعطيل ردود السورس"  then
+if Constructor(msg) then  
+database:del(bot_id.."my_GHoeq2:status"..msg.chat_id_) 
+send(msg.chat_id_, msg.id_," ✹ تـم تـعـطـيل ردود السورس") 
+return false end
+end
+
+if text ==  تيست  then 
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,   لسه بخير متقلقش   ) 
+return false
+end
+
+
+if text ==  سلام  then 
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_," ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [مع الف سلامه يقلبي متجيش تاني..😹💔🎶](t.me/X_G_33) )
+return false
+end
+
+if text ==  هاي  or text ==  هيي  then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_," ✹معطله") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [باي..😺💜](t.me/X_G_33) )
+return false
+end
+
+if text then 
+list = { برايفت }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [خدوني معاكم برايفت والنبي..🥺💜](t.me/X_G_33) )
+return false
+end
+end
+end
+
+if text then 
+list = { النبي }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [عليه الصلاه والسلام..💛🙂](t.me/X_G_33) )
+return false
+end
+end
+end
+
+if text then 
+list = { قفل المحن }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  اهلا عزيزي تم قفل المحن بنجاح اتمحونوا بف عشان المراره 😹?? ) 
+return false
+end
+end
+end
+
+if text then 
+list = { 🙄 }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [نزل عينك تحت كدا علشان هتخاد علي قفاك..✹♥️](t.me/X_G_33) )
+return false
+end
+end
+end
+
+if text then 
+list = { فتح المحن }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  اهلا عزيزي تم فتح المحن بنجاح ) 
+return false
+end
+end
+end
+if text == "حلوه"  or text == "حلو" then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [انت الي حلو ياقمر..♥️🦋](t.me/X_G_33) )
+return false
+end
+
+if text then 
+list = { 💋 }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [انا عايز مح انا كمان 🥺💛](t.me/X_G_33) )
+return false
+end
+end
+end
+
+if text then 
+list = { بف }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [وحيات امك ياكبتن خدوني معاكو بيف...🥺💔](t.me/X_G_33) )
+return false
+end
+end
+end
+
+if text then 
+list = { 😭 }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [بتعيط تيب لي طيب..😥](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { خاص }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [ونجيب اشخاص ...😂😜](t.me/X_G_33) )
+return false
+end
+end
+end
+
+if text then 
+list = { بحبك }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [بـعشـقق .🥰❤️](t.me/X_G_33) )
+return false
+end
+end
+end
+
+if text then 
+list = { بيف }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [وحيات امك ياكبتن خدوني معاكو بيف...🥺💔](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { سلام عليكم }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [وعليكم السلام ..🖤✹](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { ++٩٠ }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [خخخ امال ..😹](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { قامد }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [قامد قموده ..🌝♥️](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { جامد }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [انا اجمد ..✹💕](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { جمد }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [انا اجمد ..??💕](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { تيجي }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [مش هروح ..😹👻](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { مش }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [مش هتيجي مش هروح ..😹👻](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { بنتي }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [الود كبر وبقي عندو بنت ..😻💥](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { ابني }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [عندو كام سنه ..😹💥](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { 😂 }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [القمر مهو بيضكك اهوه ..✹💕](t.me/X_G_33) )
+return false
+end
+end
+end
+if text then 
+list = { 😹 }
+for k,v in pairs(list) do
+if string.find(text,v) ~= nil then
+local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_,"  ") 
+return false  
+end
+send(msg.chat_id_,msg.id_,  [القمر مهو بيضكك اهوه ..✹💕](t.me/X_G_33) )
+return false
+end
+end
+end
+if text ==  رفع خنزير  or text ==  رفع خنزير  or text ==  رفع خنزير  then
+Text = [[
+♪ تم رفع العضو خنزير من النوع
+♪ الاول هو الان خنزير الروم 😹😹
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع كلب  or text ==  رفع كلب  or text ==  رفع كلب  then
+Text = [[
+♪ تم رفع العضو في مزرعه الكلاب
+♪ حد يديلو عضمه يالا 🦴😂
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع بقلبي  or text ==  رفع بقلبي  or text ==  رفع قلبي  then
+Text = [[=
+♪ تم رفع العضو داخل قلبك. 
+♪ هو الان في قلبك خلي بالك ليكسرو 😂😂💔
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع شاذ  or text ==  رفع شاذ  or text ==  رفع شاذ  then
+Text = [[
+♪ تم رفع العضو بنجاح هو الان في نادى الشواذ 🏳‍🌈
+♪ كلو يبعد عن الشاذ ده 😂😂
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  تنزيل شاذ  or text ==  تنزيل شاذ  or text ==  تنزيل شاذ  then
+Text = [[
+تم رفع العضو بنجاح هو الان في نادى الشواذ 🏳‍🌈
+كلو يبعد عن الشاذ ده 😂😂
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع حمار  or text ==  رفع حمار  or text ==  رفع حمار  then
+Text = [[
+♪ تم رفع العضو حمار بنجاح
+♪ هو الان حمار الروم 😹😹
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع زواج  or text ==  زواج  or text ==  رفع زوجتي  then
+Text = [[
+♪ تم زواجك بلعضو هيا الان حلالك ❤️
+♪ يالا روحو اعملو واحد بس مش في الروم 😹😹🙈
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  طلاق  or text ==  طلاق  or text ==  طلاق  then
+Text = [[
+♪ تم طلاق الخاينه هيا 
+♪ مطلقه تعالي نتجوز انا وانت 😹😹
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع رقاصه  or text ==  رفع رقاصه  or text ==  رفع رقاصه  then
+Text = [[
+♪ تم رفع العضو  رقاصه بنجاح❤️ 
+♪ يلا تعالى يارقاصه هنقطك بالدولارات 
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع وتكه  or text ==  رفع وتكه  or text ==  رفع وتكه  then
+Text = [[
+♪ العضو وتكه بالفعل 
+♪ والكل بيكراش عليها خد بالك 😉😈
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع حيوان  or text ==  رفع حيوان  or text ==  رفع حيوان  then
+Text = [[
+♪ تم رفع العضو  حيوان فرز اول 
+♪ يلا تعالى جنينة الحيوانات مستنياك
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع فاشل  or text ==  رفع فاشل  or text ==  رفع فاشل  then
+Text = [[
+♪ تم رفع العضو  الفاشل بنجاح 
+♪ يلا تعالى يافاشل وسيب الكتاب كده كده هتسقط
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع ابني  or text ==  رفع ابني  or text ==  رفع ابني  then
+Text = [[
+♪ تم رفع العضو  ابن بنت بنتي 
+♪ تعالي يابني هاتلنا شاي ام حسن 
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع دكري  or text ==  رفع دكري  or text ==  رفع دكري  then
+Text = [[
+♪ تم رفع العضو  دكري وابو عيالي 
+♪ يلا تعالى يادكري ادم ابننا بينادي
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع قطتي  or text ==  رفع قطتي  or text ==  رفع قطتي  then
+Text = [[
+♪ تم رفع العضو  قطتي ونن عنيا 
+♪ يلا تعالى ياقطتي نشتري تونه هههه
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع بنتي  or text ==  رفع بنتي  or text ==  رفع بنتي  then
+Text = [[
+♪ تم رفع العضو  بنتي ونن عنيا 
+♪ تع يبنتي شوفي بابا عاوز اي
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع خاين  or text ==  رفع خاين  or text ==  رفع خاين  then
+Text = [[
+♪ تم رفع العضو  الخاين قليل الاصل 
+♪ تعالي بينادو عليك ياخاين
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع خاينه  or text ==  رفع خاينه  or text ==  رفع خاينه  then
+Text = [[
+♪ تم رفع العضو  الخاينه بنجاح 
+♪ تعالي ياخاينه فضحتينا ولميتي علينا الناس
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع عبيط  or text ==  رفع عبيط  or text ==  رفع عبيط  then
+Text = [[
+♪ تم رفع العضو  عبيط واهبل 
+♪ يارب استرها معاه اصل هو عبيط
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع متخزوق  or text ==  رفع متخزوق  or text ==  رفع متخزوق  then
+Text = [[
+♪ تم رفع العضو  المتخزوق الحزين 
+♪ يلا تعالى يامتخزوق نستفيد من خبرتك
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع متخزوق  or text ==  رفع متخزوق  or text ==  رفع متخزوق  then
+Text = [[
+♪ تم رفع العضو  المتخزوق الحزين 
+♪ يلا تعالى يامتخزوق نستفيد من خبرتك
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع متوحد  or text ==  رفع متوحد  or text ==  رفع متوحد  then
+Text = [[
+♪ تم رفع العضو  الى قائمه المتوحدين والمرضي النفسيين
+♪ راح نجبلك دكتور نفساني
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع بقره  or text ==  رفع بقره  or text ==  رفع بقره  then
+Text = [[
+♪ تم رفع العضو  البقره الحلوبه 
+♪ يلا تعالى يابقره بدنا لبن
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع غبي  or text ==  رفع غبي  or text ==  رفع غبي  then
+Text = [[
+♪ تم رفع العضو  غبي من اغبياء الجروب 
+♪ قولولو نقطنا بسكاتك
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع غبي  or text ==  رفع غبي  or text ==  رفع غبي  then
+Text = [[
+♪ تم رفع العضو  غبي من اغبياء الجروب 
+♪ قولولو نقطنا بسكاتك
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع عره  or text ==  رفع عره  or text ==  رفع عره  then
+Text = [[
+♪ تم رفع العضو  عره الجروب 
+♪ مش عيب اما تكون عره كده
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع قرد  or text ==  رفع قرد  or text ==  رفع قرد  then
+Text = [[
+♪ تم رفع العضو  القرد النسنان 
+♪ حد يشفلو موزه بسرعه
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع فرسه  or text ==  رفع فرسه  or text ==  رفع فرسه  then
+Text = [[
+♪ تم رفع العضو  فرسه بنجاح 
+♪ هووووووووووف صاااروخ ياناس
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع علق  or text ==  رفع علق  or text ==  رفع علق  then
+Text = [[
+♪ تم رفع العضو بنادى 
+العلوقيه سبورت اهلا بك 😹😹
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع كيرفي  or text ==  رفع كيرفي  or text ==  رفع كيرفي  then
+Text = [[
+♪ تم رفع العضو كيرفي 
+الان هو جسمو صاروخ 🤤😹 √
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+--     By Developer Hiaveen     --
+if text ==  رفع فلات  or text ==  رفع فلات  or text ==  رفع فلات  then
+Text = [[
+♪ تم رفع العضو فلات هو الان جسمو 
+معضم ويقرف 😖😹
+√
+]]
+send(msg.chat_id_, msg.id_,Text)
+return false
+end
+
+if text == "عقاب" or text == "قول عقاب" or text == "العقاب" then
+if not database:get(bot_id.. lock:add ..msg.chat_id_) then
+local texting = {"قل لواحد ماتعرفه عطني كف 🧸","🧸سو مشهد تمثيلي عن مصرية بتولد","🧸صور اي شيء يطلبه منك الاعبين","🧸البس طرحه امك او اختك ","🧸لا خلاص معتش في سمحتك"," 🧸اتصل لاخوك و قول له انك سويت حادث و الخ....","🧸تكلم باللغة الانجليزية الين يجي دورك مرة ثانية لازم تتكلم اذا ما تكلمت تنفذ عقاب ثاني","🧸تروح عند شخص تقول له ","🧸 اتصل على ابوك و قول له انك رحت مع بنت و احين هي حامل....","🧸اتصل على امك و قول لها انك ","🧸اذا انت ولد اكسر اغلى او احسن عطور عندك اذا انتي بنت اكسري الروج حقك او الميك اب حقك"}
+send(msg.chat_id_, msg.id_,   ..texting[math.random(#texting)]..  )
+end
 end
 
 if text == "كتبات" or text == "حكمه" or text == "قصيده" then 
