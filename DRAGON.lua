@@ -12795,15 +12795,6 @@ send(msg.chat_id_, msg.id_," ✹ تـم تـعـطـيل ردود السورس")
 return false end
 end
 
-if text ==  تيست  then 
-local my_ph = database:get(bot_id.."my_GHoeq2:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"  ") 
-return false  
-end
-send(msg.chat_id_,msg.id_,   لسه بخير متقلقش   ) 
-return false
-end
 
 
 if text ==  سلام  then 
