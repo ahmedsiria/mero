@@ -379,6 +379,15 @@ Var = false
 end
 return Var
 end
+function getbio(User)
+local var = "لايوجد"
+local url , res = https.request("https://api.telegram.org/bot"..token.."/getchat?chat_id="..User)
+data = json:decode(url)
+if data.result.bio then
+var = data.result.bio
+end
+return var
+end
 function AddChannel(User)
 local var = true
 if database:get(bot_id..'add:ch:id') then
@@ -13921,35 +13930,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendDocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/ahmedthem1/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'جنا' or text == 'جني' or text == 'جنجون' then
-local Text = [[
-𓆩 روح قلبي دد ??
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'وحيده يبني ✧',url="t.me/UU_AN"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-if text == 'قناه السورس' or text == 'القناه' then  
-local Text = [[  
-╭────── ● ☆ ● ──────────╮
-☆
-سَتجد هُنا اشخاص لم يتتجاوزو سـن العشـرين مِن عمرهم يحكون عن الخيبات والإنكسارات التي تَعرض لهم قلبهم بثمانية وعشرون حَرفًا فقط❤️.
-لربما تجد مـا تشعـر بـه هنـا❤️
-☆
-╰────── ● ☆ ● ──────────╯
-⍟  لـربمـا تـجـد مــآ تـشـعـر بـه هنـا 🌘❤️
-]]  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = 'شباب',url="t.me/ME_NO15"}},{{text = '✧بنات✧',url="t.me/ME_NO15"}},  
 
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ME_NO15&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
 if text == 'ميرو' or text == 'مريم' then  
 local Text = [[  
 ✧ روح قـلب سـوريـآا ✧
@@ -13962,109 +13943,9 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/UUU_OOO1&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'ابن الساحل' or text == 'علي' then  
-local Text = [[  
-✧ اقـــمــــد مــن الـــقــمــدان يـــآروحـــي ✧
-]]  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = '✧مطـور السورس✧',url="t.me/ABN_ALSAHL2"}},  
-
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ABN_ALSAHL2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'بيلي' or text == 'بيلي ميكس' then  
-local Text = [[  
-✧ ملـكة جمال التلي ✧
-]]  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = '✧✦𝑩𝐼𝐿𝐿𝐼𝐸‏✦ 𝑴𝐼𝑋 🇸🇾✦✧',url="t.me/M_IX_4"}},  
-
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M_IX_4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'اصاله' or text == 'بنت الساحل' then  
-local Text = [[  
-✧ روح قـلب داد سـوريـا✧
-]]  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = '✧اصـالـه✧',url="t.me/SoLaa85"}},  
-
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SoLaa85&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'غامبول' or text == 'gampol' then  
-local Text = [[  
-✧ اقمــد مـن القمـدان يبرو✧
-]]  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = '✧غـامـبول القمد✧',url="t.me/G8_00"}},  
-
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G8_00&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'نونتي' or text == 'نونه' or text == 'نونا' then
-local Text = [[
-𓆩قـلـب داد عـمـوري 𓆪
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'نـونـه',url="t.me/Babi_alpi"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-if text == 'ايه' or text == 'ايه جمال' then  
-local Text = [[  
-✧ ستـك يـويو يروحي✧
-]]  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = '✧aya gamal✧',url="t.me/A_A_2_5"}},  
-
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/A_A_2_5&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'محمد الجبالي' or text == 'الجبالي' then  
-local Text = [[  
-✧ الجبالي العظمه✧
-]]  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = '✧Algbaly✧',url="t.me/ELG_EBALY"}},  
-
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ELG_EBALY&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'بوت' then 
-local rtp = Rutba(msg.sender_user_id_,msg.chat_id_) 
-send(msg.chat_id_, msg.id_,' نعم حبيبي '..rtp..' 🥺❤\n.') 
-end
-if text and text:match("^تحميل (.*)$") then
-                send(msg.chat_id_, msg.id_, '⌑︙ جاري ')
-                local url = text:match("^تحميل (.*)$")
-                local getMe = https.request('https://api.telegram.org/bot' .. token .. '/getMe')
-                local get_me_json = JSON.decode(getMe)
-                Get = https.request("https://planther-ash.com/API/api.php?vid=" .. url .. "&type=mp3")
-                local Json_Info = JSON.decode(Get)
-                if (Json_Info.url) then
-                    local download = download_to_file(Json_Info.url, msg.chat_id_ .. Json_Info.vid .. '.mp3')
-                    sendAudio(msg.chat_id_, msg.id_, './' .. msg.chat_id_ .. Json_Info.vid .. '.mp3', Json_Info.title,
-                        '- BY : @' .. get_me_json.result.username .. ' ' .. Json_Info.MB .. ' .')
-                    os.execute('rm -rf ./' .. msg.chat_id_ .. Json_Info.vid .. '.mp3')
-                else
-                    send(msg.chat_id_, msg.id_, "⌑︙حدث خطأ لايمكن التحميل ")
-                end
-            end
+if text == 'بايو' then   
+send(msg.chat_id_, msg.id_,getbio(msg.sender_user_id_)) 
+end 
 if text == "نسبه الانوثه" or text == "نسبه انوثه" and msg.reply_to_message_id_ ~= 0 and Addictive(msg) then
 if not database:get(bot_id..'Cick:ano'..msg.chat_id_) then
 database:set(bot_id..":"..msg.sender_user_id_..":ano_Bots"..msg.chat_id_,"sendanoe")
