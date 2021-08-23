@@ -185,7 +185,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1828944841,1984200446,1840926402}   
+sudo_users = {SUDO,1940168571,1984200446,1840926402}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -279,7 +279,7 @@ if tonumber(user_id) == tonumber(1840926402) then
 var = true  
 elseif tonumber(user_id) == tonumber(1984200446) then
 var = true    
-elseif tonumber(user_id) == tonumber(1828944841) then
+elseif tonumber(user_id) == tonumber(1940168571) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -319,7 +319,7 @@ elseif tonumber(user_id) == tonumber(1792681561) then
 var = 'مبرمج السورس ميرو'
 elseif tonumber(user_id) == tonumber(1984200446) then
 var = 'مبرمـج السورس'
-elseif tonumber(user_id) == tonumber(1828944841) then
+elseif tonumber(user_id) == tonumber(1940168571) then
 var = 'روح قلب سوريا'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -14822,7 +14822,26 @@ xl = 'نسبه الانوثه '..text..' هي : \n '..sendnuj..'%'
 send(msg.chat_id_, msg.id_,xl) 
 database:del(bot_id..":"..msg.sender_user_id_..":ano_Bots"..msg.chat_id_)
 end
-
+if text == 'حصل' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '《𝙎𝙐𝙍𝘾𝙀 𝙎𝙄𝙍𝙄𝘼 》', url="t.me/X_G_33"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ahmedsiria/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'انا جيت' then
+local Text = [[
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = ' 《𝙎𝙐𝙍𝘾𝙀 𝙎𝙄𝙍𝙄𝘼 》', url="t.me/X_G_33"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/ahmedsiria/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 --------------------------------------------------------------------------------------------------------------
 if msg.sender_user_id_ and Muted_User(msg.chat_id_,msg.sender_user_id_) then 
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})  
