@@ -185,7 +185,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1828944841,1853512398,1840926402}   
+sudo_users = {SUDO,1828944841,1984200446,1840926402}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -277,7 +277,7 @@ end
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(1840926402) then  
 var = true  
-elseif tonumber(user_id) == tonumber(1853512398) then
+elseif tonumber(user_id) == tonumber(1984200446) then
 var = true    
 elseif tonumber(user_id) == tonumber(1828944841) then
 var = true  
@@ -317,7 +317,7 @@ if tonumber(user_id) == tonumber(1840926402) then
 var = 'المـبرمج سـوريـآآ'
 elseif tonumber(user_id) == tonumber(1792681561) then
 var = 'مبرمج السورس ميرو'
-elseif tonumber(user_id) == tonumber(1853512398) then
+elseif tonumber(user_id) == tonumber(1984200446) then
 var = 'مبرمـج السورس'
 elseif tonumber(user_id) == tonumber(1828944841) then
 var = 'روح قلب سوريا'
@@ -3874,7 +3874,7 @@ if tonumber(result.sender_user_id_) == tonumber(1840926402) then
 send(msg.chat_id_, msg.id_, " ✧ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1853512398) then  
+if tonumber(result.sender_user_id_) == tonumber(1984200446) then  
 send(msg.chat_id_, msg.id_, " ✧ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -3920,7 +3920,7 @@ if result.id_ == tonumber(1840926402) then
 send(msg.chat_id_, msg.id_, " ✧ لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(1853512398) then
+if result.id_ == tonumber(1984200446) then
 send(msg.chat_id_, msg.id_, " ✧ لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
@@ -3960,7 +3960,7 @@ if tonumber(userid) == tonumber(1840926402) then
 send(msg.chat_id_, msg.id_, " ✧ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1853512398) then  
+if tonumber(userid) == tonumber(1984200446) then  
 send(msg.chat_id_, msg.id_, " ✧ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -4001,7 +4001,7 @@ if tonumber(result.sender_user_id_) == tonumber(1840926402) then
 send(msg.chat_id_, msg.id_, " ✧ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1853512398) then  
+if tonumber(result.sender_user_id_) == tonumber(1984200446) then  
 send(msg.chat_id_, msg.id_, " ✧ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -4046,7 +4046,7 @@ if result.id_ == tonumber(1840926402) then
 send(msg.chat_id_, msg.id_, " ??‍♂️ لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(1853512398) then
+if result.id_ == tonumber(1984200446) then
 send(msg.chat_id_, msg.id_, " ✧ لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
@@ -4086,7 +4086,7 @@ if tonumber(userid) == tonumber(1840926402) then
 send(msg.chat_id_, msg.id_, " ✧ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1853512398) then  
+if tonumber(userid) == tonumber(1984200446) then  
 send(msg.chat_id_, msg.id_, " ✧ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -10469,7 +10469,6 @@ local DRAGON_Msg = {
 'اسمي الكيوت '..Namebot..' 🌝💘',
 'اسمي  '..Namebot..' ياحياتي🧸♥️',
 'اسمي  '..Namebot..' يوتكه🙈🍑',
-'انت تعرف انو بوت  '..Namebot..'  متنصب علي سورس سوريا🙈♥️',
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
