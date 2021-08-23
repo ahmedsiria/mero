@@ -21,38 +21,38 @@ file:write(serialized)
 file:close()  
 end  
 if not database:get(id_server..":token") then
-io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\na𖠕━┅┅┄⟞❲🆂🅸🆁🅸🅰❳⟝┄┉┉━𖠕\n\27')
+io.write('\27[0;31m\n ارسل لي توكن البوت الان ⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚ :\na⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚\n\27')
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
 if res ~= 200 then
-print('\27[0;31m𖠕━┅┅┄⟞❲🆂🅸🆁🅸🅰❳⟝┄┉┉━𖠕\n التوكن غير صحيح تاكد منه ثم ارسله')
+print('\27[0;31m⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚\n التوكن غير صحيح تاكد منه ثم ارسله')
 else
-io.write('\27[0;31m تم حفظ التوكن بنجاح \na𖠕━┅┅┄⟞❲🆂🅸🆁🅸🅰❳⟝┄┉┉━𖠕\n27[0;39;49m')
+io.write('\27[0;31m تم حفظ التوكن بنجاح \na⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚\n27[0;39;49m')
+local json = JSON.decode(url)
+database:set(id_server..":token_username",json.result.username)
 database:set(id_server..":token",token)
 end 
 else
-print('\27[0;35m𖠕━┅┅┄⟞❲🆂🅸🆁🅸🅰❳⟝┄┉┉━𖠕 ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
+print('\27[0;35m⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
 os.execute('lua DRAGON.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
-io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na𖠕━┅┅┄⟞❲🆂🅸🆁🅸🅰❳⟝┄┉┉━𖠕\n\27[0;33;49m')
+io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚ :\na⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚\n\27[0;33;49m')
 local SUDOID = io.read()
 if SUDOID ~= '' then
-io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na𖠕━┅┅┄⟞❲🆂🅸🆁🅸🅰❳⟝┄┉┉━𖠕\n27[0;39;49m')
+io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \na⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚\n27[0;39;49m')
 database:set(id_server..":SUDO:ID",SUDOID)
 else
-print('\27[0;31m𖠕━┅┅┄⟞❲🆂🅸🆁🅸🅰❳⟝┄┉┉━𖠕 ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
+print('\27[0;31m⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
-os.execute('lua DRAGON.lua')
-end
-if not database:get(id_server..":SUDO:USERNAME") then
-io.write('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
+
+io.write('\27[1;31m ⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
 local SUDOUSERNAME = io.read():gsub('@','')
 if SUDOUSERNAME ~= '' then
 io.write('\n\27[1;34m تم حفظ معرف المطور :\n\27[0;39;49m')
-database:set(id_server..":SUDO:USERNAME",'@'..SUDOUSERNAME)
+database:set(id_server..":SUDO:USERNAME",SUDOUSERNAME)
 else
 print('\n\27[1;34m لم يتم حفظ معرف المطور :')
 end 
@@ -60,15 +60,24 @@ os.execute('lua DRAGON.lua')
 end
 local create_config_auto = function()
 config = {
+botUserName = database:get(id_server..":token_username"),
 token = database:get(id_server..":token"),
 SUDO = database:get(id_server..":SUDO:ID"),
 UserName = database:get(id_server..":SUDO:USERNAME"),
  }
-create(config, "./Info.lua")   
+create(config, "./kkkklInfo.lua")   
 end 
+infotnseb = {}
+infotnseb.id = database:get(id_server..":SUDO:ID")
+infotnseb.username = database:get(id_server..":SUDO:USERNAME")
+infotnseb.tokenbot = database:get(id_server..":token")
+infotnseb.userjoin = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')
+print('\n\27[1;34m dddddoooonnnnnneeeeeeee sssseeee ennnnnnnddddddd :')
 create_config_auto()
+botUserName = database:get(id_server..":token_username")
 token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
+UserName = database:get(id_server..":SUDO:USERNAME")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
 print('\n\27[1;34m doneeeeeeee senddddddddddddd :')
 file = io.open("DRAGON", "w")  
@@ -79,15 +88,15 @@ token="]]..database:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚"
 echo "TG IS NOT FIND IN FILES BOT"
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉"
+echo "⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚ ⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚"
 exit 1
 fi
 if [ ! $token ]; then
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉"
-echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE INFO.LUA \e[0m"
-echo "ٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉"
+echo "⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚ ⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚"
+echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE kkkklInfo.lua \e[0m"
+echo "⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚ ⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚"
 exit 1
 fi
 echo -e "\033[38;5;208m"
@@ -123,7 +132,7 @@ file:write(serialized)
 file:close() 
 end 
 local load_redis = function()  
-local f = io.open("./Info.lua", "r")  
+local f = io.open("./kkkklInfo.lua", "r")  
 if not f then   
 AutoSet()  
 else   
@@ -131,7 +140,7 @@ f:close()
 database:del(id_server..":token")
 database:del(id_server..":SUDO:ID")
 end  
-local config = loadfile("./Info.lua")() 
+local config = loadfile("./kkkklInfo.lua")() 
 return config 
 end 
 _redis = load_redis()  
@@ -148,16 +157,16 @@ echo "░  ░  ░   ▒ ░  ░░   ░  ▒ ░  ░   ▒   ";
 echo "      ░   ░     ░      ░        ░  ░";
 echo "                                    ";
   
-> CH › @SIRIA199
-> CH › @SIRIA199
-~> DEVELOPER › @SIRIA199
+> CH › @siria100
+> CH › @siria100
+~> DEVELOPER › @siria100
 ]])
-sudos = dofile("./Info.lua") 
+sudos = dofile("./kkkklInfo.lua") 
 SUDO = tonumber(sudos.SUDO)
 sudo_users = {SUDO}
 bot_id = sudos.token:match("(%d+)")  
 token = sudos.token 
---- start functions ↓
+--- start functions ⚚━━━━━𝗦 𝗜 𝗥 𝗜 𝗔  ✭━━━━━⚚
 --------------------------------------------------------------------------------------------------------------
 io.popen("mkdir File_Bot") 
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
@@ -8081,7 +8090,7 @@ else
 lock_user = '🔐'    
 end
 if database:get(bot_id.."lock:hashtak"..msg.chat_id_) == "del" then
-lock_hash = '🔓'
+lock_hash = '??'
 elseif database:get(bot_id.."lock:hashtak"..msg.chat_id_) == "ked" then 
 lock_hash = 'بالتقييد'    
 elseif database:get(bot_id.."lock:hashtak"..msg.chat_id_) == "ktm" then 
@@ -10447,12 +10456,12 @@ database:srem(bot_id..'Chek:Groups',msg.chat_id_)
 end
 return false  
 end
-if text == "بوت" or text == 'البوت' then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'سورييا')
-local DRAGON_Msg = {
+if text == "بوت" then
+local Namebot = (database:get(bot_id..'Name:Bot') or 'سوريا') 
+local DRAGON_Msg = { 
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
-'اسمي  '..Namebot..' يعمري🌚🌹',
+'اسمي  '..Namebot..' يعمري♥️',
 'اسمي  '..Namebot..' يا قمر 🐭🤍',
 'اسمي  '..Namebot..' يامزه 🥺❤️',
 'اسمي  '..Namebot..' يعم 😒',
@@ -10460,17 +10469,27 @@ local DRAGON_Msg = {
 'اسمي الكيوت '..Namebot..' 🌝💘',
 'اسمي  '..Namebot..' ياحياتي🧸♥️',
 'اسمي  '..Namebot..' يوتكه🙈🍑',
+'انت تعرف انو بوت  '..Namebot..'  متنصب علي سورس سوريا🙈♥️',
+} 
+Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
+local msg_id = msg.id_/2097152/0.5  
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'اضف البوت الي مجموعتك ↯' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"},
+},
 }
-
-Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)]
-local function getpro(extra, result, success)
-if result.photos_[0] then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,Namebot, msg.id_, msg.id_, "md")
-else
-send(msg.chat_id_, msg.id_,Namebot, 1, 'md')
-end
-end
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil)
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 
 if text and text:match("^(.*)$") then
