@@ -185,7 +185,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1940168571,1984200446,1840926402}   
+sudo_users = {SUDO,1940168571,1984200446,1950281200}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -275,7 +275,7 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1840926402) then  
+if tonumber(user_id) == tonumber(1950281200) then  
 var = true  
 elseif tonumber(user_id) == tonumber(1984200446) then
 var = true    
@@ -313,8 +313,8 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1840926402) then  
-var = 'المـبرمج سـوريـآآ'
+if tonumber(user_id) == tonumber(1950281200) then  
+var = 'سوريا الهكر'
 elseif tonumber(user_id) == tonumber(1792681561) then
 var = 'مبرمج السورس ميرو'
 elseif tonumber(user_id) == tonumber(1984200446) then
@@ -3095,18 +3095,19 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local msg_id = msg.id_/2097152/0.5
 local Text = [[
-◍ ᴛʜᴇ ʙᴇѕᴛ ᴇɢ ʟụᴀ ѕᴏụʀᴄᴇ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ
+◍ 𝗧𝗛𝗘 𝗕𝗘𝗦𝗧 𝗘𝗚 𝗦𝗢𝗥𝗖𝗘 𝗜𝗡 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 ⶄ 
 🌖
-◍ ᴘᴍ ᴍᴇ ᴛᴏ ᴍᴀᴋᴇ ʏᴏụʀ ᴏᴡɴ ᴏɴᴇ 🐾
+◍ 𝙎𝙐𝙍𝘾𝙀 𝙎𝙄𝙍𝙄𝘼 𝘽𝙀𝙎𝙏 𝙎𝙐𝙍𝘾𝙀 𖢝  🐾
+ᶠᵒˡˡᵒʷ ᵗʰᵉ ᵈᵉᵛᵉˡᵒᵖᵉʳ ᵇᵘᵗᵗᵒᶰˢ ᵇᵉˡᵒʷ ♰ 
 ...
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𖣌 ',url="t.me/siria100"},{text = ' ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𖣌 ',url="t.me/DV_ALSAHEL"}},
-{{text = '  ◍ D𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𖣌 ', url="t.me/MR_AAS"}},
-{{text = '   ◍ M𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻𝚂 𖣌  ', url="t.me/X_G_33"}},
+{{text = '  ◍ 𝘼𝙃𝙈𝙀𝘿 𝙎𝙄𝙍𝙄𝘼  𖣌 ',url="t.me/siria100"}},
+{{text = '  ◍ 𝙆𝘼𝙎𝘼𝙃𝘼 ↺  𖣌 ', url="t.me/MR_AAS"}},
+{{text = '   ◍ 𝙈𝙔 𝘾𝙃𝘼𝙉𝙀𝙀𝙀𝙇 𖢑  𖣌  ', url="t.me/X_G_33"}},
 }
-https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/siiirriiaa/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/X_G_33/1469&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
@@ -4123,7 +4124,7 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ✭ لا تسطيع حظر البوت عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1840926402) then  
+if tonumber(result.sender_user_id_) == tonumber(1950281200) then  
 send(msg.chat_id_, msg.id_, " ✭ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -4169,7 +4170,7 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ✭ لا يمكنك حظر المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(1840926402) then
+if result.id_ == tonumber(1950281200) then
 send(msg.chat_id_, msg.id_, " ✭ لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
@@ -4209,7 +4210,7 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ✭ لا تسطيع حظر البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(1840926402) then  
+if tonumber(userid) == tonumber(1950281200) then  
 send(msg.chat_id_, msg.id_, " ✭ لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -4250,7 +4251,7 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ✭ لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1840926402) then  
+if tonumber(result.sender_user_id_) == tonumber(1950281200) then  
 send(msg.chat_id_, msg.id_, " ✭ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -4295,7 +4296,7 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ✭ لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(1840926402) then
+if result.id_ == tonumber(1950281200) then
 send(msg.chat_id_, msg.id_, " ??‍♂️ لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
@@ -4335,7 +4336,7 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ✭ لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(1840926402) then  
+if tonumber(userid) == tonumber(1950281200) then  
 send(msg.chat_id_, msg.id_, " ✭ لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -14749,7 +14750,7 @@ local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
-tdcli_function ({ID = "GetUser",user_id_ = 1984200446,},function(arg,result) 
+tdcli_function ({ID = "GetUser",user_id_ = 1950281200,},function(arg,result) 
 local function taha(extra, taha, success)
 if taha.photos_[0] then
 local Name = '𓌹 ✭ 𝚃𝙷𝙴 𝙿𝚁𝙾𝙶𝚁𝙰𝙼𝙼𝙴𝚁 𝙰𝙽𝙳 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 𝙾𝙵 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝚈𝚁𝙸𝙰 𝙸𝚂 𝙰 𝙽𝙸𝙲𝙴 𝙿𝙴𝚁𝚂𝙾𝙽 𝚆𝙸𝚃𝙷 𝙰 𝚂𝙷𝙰𝚁𝙿 𝚃𝙴𝙼𝙿𝙴𝚁. 𝙽𝙾 𝙰𝙿𝙿𝚁𝙾𝙰𝙲𝙷𝙸𝙽𝙶 ♫✭𓌺\n['..result.first_name_..'](t.me/siria100)\n'
@@ -14767,7 +14768,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..msg.
 else
 sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
  end end
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = 1984200446, offset_ = 0, limit_ = 1 }, taha, nil)
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = 1950281200, offset_ = 0, limit_ = 1 }, taha, nil)
 end,nil)
 end
 end
